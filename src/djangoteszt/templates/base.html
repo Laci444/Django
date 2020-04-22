@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+
+  /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
+  }
+
+  /*var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }*/
+
+  function dropdown() {
+    this.className = "dropped";
+  }
+  function dropup() {
+    this.className = "dropnt";
+  }
+  window.addEventListener('mouseover', dropdown(), false);
+  window.addEventListener('mouseout', dropup(), false);
+    </script>
+    <style>
+        .fs1 {
+    max-width: 500px;
+    border-radius: 15px;
+    background-color: lightblue;
+}
+input,text {
+    background-color: lightblue;
+}
+body {
+    background-color: lightgreen;
+}
+.jobbra {
+    position: absolute;
+    padding: 30px;
+    right: 150px;
+    height: absolute;
+}
+.drpdwn {
+  list-style-type: none;
+  padding-left: 16px;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+  }
+    .drpdwn li a, .dropdown-btn {
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+    .drpdwn li a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+  }
+    .drpdwn .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .active {
+    background-color: green;
+    color: white;
+  }
+  .dropnt {
+    padding-left: 30px;
+    height: 0;
+    transition: height 1000ms ease-in-out;
+    overflow: hidden;
+    list-style-type: none;
+  }
+  .dropped {
+    height: 50 0px;
+    padding-left: 30px;
+    list-style-type: none;
+    transition: height 1000ms ease-in-out;
+    overflow: hidden;
+  }
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+  #szerke, #ter, #ker {
+    display: none;
+    position: relative;
+  }
+  #negyter {
+    position: relative;
+  }
+  .eredmeny {
+    right: 50px;
+    top: 20px;
+    background-color: lightskyblue;
+    position: absolute;
+    height: 20px;
+    width: 200px;
+    padding: 10px 10px 30px 15px;
+    border-radius: 10px ;
+  }
+    </style>
+</head>
+<body>
+    {% include 'nav.html' %}
+    <div id="main">
+    {% block content %}
+
+    {% endblock %}
+    </div>
+</body>
+</html>

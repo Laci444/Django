@@ -1,0 +1,22 @@
+<div id="mySidenav" class="sidenav"> <!--CREATE Meg kell csinálni különálló legördulőket is!-->
+        <ul class="drpdwn">
+            <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+            <li><a onmouseover="dropdown(event)" onmouseout="dropup(event)" class="dropdown-btn">Matematika<i class="fa-caret-down"></i></a></li>
+            <ul class="dropnt" id="dropdown-container" onmouseover="dropdown()" onmouseout="dropup()">
+                <li><a>Kombinatorika</a></li>
+                <li><a href="geometria.html">Geometria</a></li>
+                <li><a href="#">Algebra</a></li>
+            </ul>
+            <li><a onmouseover="dropdown(event)" onmouseout="dropup(event)" class="dropdown-btn">valami<i class="fa-caret-down"></i></a></li> <!--TODO: Ide is kell egy legördülő!-->
+            <ul class="dropnt" id="dropdown-container" onmouseover="dropdown()" onmouseout="dropup()">
+                <li><a href="#">asdf</a></li>
+                <li><a href="#">asdfa</a></li>
+                <li><a href="#">asdfas</a></li>
+            </ul>
+            <li><a href="#services">asdf</a></li>
+            <li><a href="#clients">asdf</a></li>
+            <li><a href="#contact">asdf</a></li>
+            <li><a href="#search">asdf</a></li>
+        </ul>
+    </div>
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menü</span>
